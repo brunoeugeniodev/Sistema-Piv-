@@ -1,0 +1,56 @@
+<div class="container mt-4">
+    <h1 class="mb-5 text-center" style="color: var(--primary-dark); font-weight: 700;">Gestão de Históricos de Irrigação</h1>
+
+    <div class="card-custom p-4 mb-4" id="historicoFormContainer">
+        <h3 class="mb-3 text-center" style="color: var(--primary-dark);">Cadastrar/Editar Histórico</h3>
+        <form id="historicoForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="nomeHistorico" class="form-label visually-hidden">Nome do Histórico</label>
+                    <input type="text" class="form-control-bottom-border" id="nomeHistorico" placeholder="Nome do Histórico" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="statusOperacaoRegistrado" class="form-label visually-hidden">Status da Operação</label>
+                    <input type="text" class="form-control-bottom-border" id="statusOperacaoRegistrado" placeholder="Status da Operação" required>
+                </div>
+                <div class="col-md-12">
+                    <label for="observacoesHistorico" class="form-label visually-hidden">Observações</label>
+                    <textarea class="form-control-bottom-border" id="observacoesHistorico" rows="3" placeholder="Observações"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <label for="pivoIdHistorico" class="form-label visually-hidden">Pivô Associado</label>
+                    <select class="form-control-bottom-border" id="pivoIdHistorico" required style="width: 100%;">
+                        <option value="">Selecione o Pivô</option>
+                        </select>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn-success-custom" id="btnSalvarHistorico">Salvar Histórico</button>
+                <button type="button" class="btn-secondary-custom ms-2" id="btnCancelarHistorico">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="historicoListagem" class="card-custom p-4 mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="mb-0" style="color: var(--primary-dark);">Históricos Registrados</h3>
+            <button class="btn-info-custom" id="btnListarHistoricos">Atualizar Lista</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped-custom table-hover table-custom" id="tabelaHistorico">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Status</th>
+                        <th>Observações</th>
+                        <th>Pivô(s)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>

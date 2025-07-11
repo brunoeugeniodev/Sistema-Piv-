@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <h1 class="mb-5 text-center" style="color: var(--primary-dark); font-weight: 700;">Gestão de Pivôs</h1>
+
+    <div class="text-center mb-4">
+        <button class="btn-primary-custom" id="btnAddPivoForm">Adicionar Pivô</button>
+    </div>
+
+    <div class="card-custom p-4 mb-4" id="pivoFormContainer" style="display: none;">
+        <h3 class="mb-3 text-center" style="color: var(--primary-dark);">Cadastrar/Editar Pivô</h3>
+        <form id="pivoForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="nomePivo" class="form-label visually-hidden">Nome do Pivô</label>
+                    <input type="text" class="form-control-bottom-border" id="nomePivo" placeholder="Nome do Pivô" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="idFazendaPivo" class="form-label visually-hidden">Fazenda Associada</label>
+                    <select class="form-control-bottom-border" id="idFazendaPivo" required style="width: 100%;">
+                        <option value="">Selecione a Fazenda</option>
+                        </select>
+                </div>
+                </div>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn-success-custom" id="btnSalvarPivo">Salvar Pivô</button>
+                <button type="button" class="btn-secondary-custom ms-2" id="btnCancelarPivo">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="pivoListagem">
+        <div class="text-center mt-4" id="loadingPivos">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Carregando...</span>
+            </div>
+            <p>Carregando pivôs...</p>
+        </div>
+        <div id="pivosContainer" class="mt-4">
+            </div>
+    </div>
+</div>
